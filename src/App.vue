@@ -1,20 +1,28 @@
 <template>
+  //learning how to use mustache notation
   <h1>message: {{ message }}</h1>
   <hr>
+
   <h1>number: {{ number }}</h1>
   <hr>
+
   <h1>doubleNum(50): {{ doubleNum(50) }}</h1>
   <hr>
+
   <h1>number * 2 = {{ number * 2 }}</h1>
   <hr>
+
   <h1>{{ number > 150? 'number is greater than 150':'number is less than 150'}}</h1>
   <hr>
+
   <h1>{{ harry }}</h1>
   <h1>{{ harry.name }}</h1>
   <hr>
+
   <h1>{{ hogwartsWizards }}</h1>
   <h1>{{ hogwartsWizards[0]}}</h1>
   <hr>
+
   <h1>{{ rawHtml }}</h1>
   <h1 v-text="rawHtml"></h1>
   <h1 v-html="rawHtml"></h1>
