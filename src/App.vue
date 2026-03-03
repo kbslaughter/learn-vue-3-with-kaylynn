@@ -67,6 +67,7 @@ function changeWizard() {
   }
 }
 
+//wizards array
 let wizards = ref(['Harry', 'Hermione', 'Ron'])
 </script>
 
