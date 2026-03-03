@@ -9,22 +9,65 @@
 
     <button @click="incrementNumber">Increment number</button>
   </div>
+  <div class="card">
+    <h2>Name: {{ wizard.name }}</h2>
+    <h2>Wand: {{ wizard.wand }}</h2>
+    <button @click="changeNameToUpperCase">Change name to uppercase</button>
+    <button @click="changeWandCore">Change wand core</button>
+    <button @click="changeWizard">Change Wizard</button>
+  </div>
+  <div class="card">
+    <h2>Array: {{ wizards }}</h2>
+    <button @click="wizards.push('Draco')">Add a new Wizard</button>
+  </div>
 </template>
 
 <script setup>
-import ref from 'vue'
+import { ref } from 'vue'
 let message = ref('Hello, Reactivity!')
 let number = ref(1)
 
 function changeMessageToUpperCase() {
-  message = message.toUpperCase()
+  message.value = message.value.toUpperCase()
   console.log(message)
 }
 
 function incrementNumber() {
-  number += 1
+  number.value += 1
   console.log(number)
 }
+
+let wizard = ref({
+  id: 1001,
+  name: 'Harry Potter',
+  house: 'Gryffindor',
+  age: 17,
+  wand: {
+    core: 'Phoenix Feather',
+    wood: 'Holly'
+  }
+})
+
+function changeNameToUpperCase() {
+  wizard.value.name = wizard.value.name.toUpperCase()
+}
+function changeWandCore() {
+  wizard.value.wand.core = 'Unicorn hair'
+}
+function changeWizard() {
+  wizard.value = {
+    id: 1002,
+    name: 'Hermione Granger',
+    house: 'Gryffindor',
+    age: 17,
+    wand: {
+      core: 'Dragon heartstring',
+      wood: 'Vine'
+    }
+  }
+}
+
+let wizards = ref(['Harry', 'Hermione', 'Ron'])
 </script>
 
 <style scoped>
