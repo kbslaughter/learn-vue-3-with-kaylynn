@@ -22,6 +22,7 @@
 
 <script setup>
 import { ref } from 'vue'
+//v-bind
 let message = 'Hello V-bind!'
 
 let imageUrl = ref('/public/img/banner_1.jpg')
