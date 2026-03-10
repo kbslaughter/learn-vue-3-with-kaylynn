@@ -25,7 +25,8 @@ function changeTitle() {
 }
 
 onMounted(() => {
-  input.value.focus() // programmatically focus an input on component mount
+  input.value.focus()
+  // programmatically focus an input on component mount
 })
 </script>
 
